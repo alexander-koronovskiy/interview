@@ -3,15 +3,14 @@
 ## Ожидание ответа
 1. Julia
 2. КазСофтДев
+1. Репрайсер
 3. 1С-РаРус
 
 ## Тестовые
-1. Репрайсер
-2. ML interview
-3. Compound Solutions ChatGPT
+1. ML interview
+2. Compound Solutions ChatGPT
 
 ## Стек задач
-- Репрайсер
 - ML interview
 
 ## Cписок тем
@@ -20,7 +19,7 @@
 # Рутина
 
 ## Отклики прогресс
-- January 23
+- January 23 24 
 
 ## Тестовые прогресс
 
