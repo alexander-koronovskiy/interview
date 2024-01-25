@@ -11,7 +11,13 @@
 2. Compound Solutions ChatGPT
 
 ## Стек задач
-- ML interview
+### ответ на формы
+...
+- Jupiter SQL
+- верстка резюмехи + Кирилл
+- ML interview доделать
+- задачки-sql
+
 
 ## Cписок тем
 ...
