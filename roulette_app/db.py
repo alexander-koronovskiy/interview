@@ -1,5 +1,4 @@
 import sqlite3
-from sqlite3 import OperationalError
 
 def connect_sql():
     return sqlite3.connect("example.db")
