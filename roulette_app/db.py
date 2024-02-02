@@ -4,7 +4,7 @@ def connect_sql():
     return sqlite3.connect("example.db")
 
 def select_user_info(con, user_id):
-    sql = f"SELECT round FROM routes WHERE user_id = '{user_id}'"
+    sql = f"SELECT * FROM routes WHERE user_id = '{user_id}'"
     res = con.cursor().execute(sql)
     return res.fetchall()
 
@@ -21,4 +21,4 @@ def clear_routes_table(conn):
 
 def count_by_user(conn, user_id):
     res = conn.cursor().execute("SELECT COUNT(*) FROM routes WHERE user_id = ?", (user_id,))
-    return res.fetchall()
+    return res.fetchall()[0][0]
