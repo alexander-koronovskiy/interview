@@ -1,5 +1,3 @@
-# class Roulette
-
 import random
 
 class Roulette:
@@ -7,12 +5,11 @@ class Roulette:
         self.numbers = list(range(1, 11))
         self.drawn_numbers = []
 
-    def spin(self):
-        if len(self.drawn_numbers) < 10:
+    def spin(self, nums):
+        self.drawn_numbers = [int(x) for x in nums]
+        if len(self.drawn_numbers) < 9:
             result = random.choice(self.numbers)
             self.drawn_numbers.append(result)
-            return result
         else:
             result = "Jackpot"
-            print("Congratulations! Jackpot!")
-            return result
+        return result

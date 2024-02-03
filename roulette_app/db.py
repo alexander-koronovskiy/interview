@@ -27,3 +27,7 @@ def show_routes_table(conn):
     sql = "SELECT * FROM routes"
     res = conn.cursor().execute(sql)
     return res.fetchall()
+
+def load_logs(conn, user_id, round):
+    res = conn.cursor().execute("SELECT log FROM routes WHERE user_id = ? AND round = ?", (user_id, str(round)))
+    return [x[0] for x in res.fetchall()]
