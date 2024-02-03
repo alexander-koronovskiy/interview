@@ -1,5 +1,5 @@
 from core import Roulette
-from db import count_by_user, connect_sql, add_info, select_user_info, clear_routes_table
+from db import count_by_user, connect_sql, add_info, select_user_info, show_routes_table
 
 
 def add_spin(user_id, route):
@@ -12,4 +12,8 @@ def add_spin(user_id, route):
         log, round = roulette.spin(), count_by_user(conn, user_id) // 10
 
     add_info(conn, user_id, round, route, log)
-    print(select_user_info(conn, user_id))
+    # print(select_user_info(conn, user_id))
+
+def show_statistics():
+    conn = connect_sql()
+    return show_routes_table(conn)

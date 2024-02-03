@@ -3,9 +3,9 @@ import sqlite3
 def connect_sql():
     return sqlite3.connect("example.db")
 
-def select_user_info(con, user_id):
+def select_user_info(conn, user_id):
     sql = f"SELECT * FROM routes WHERE user_id = '{user_id}'"
-    res = con.cursor().execute(sql)
+    res = conn.cursor().execute(sql)
     return res.fetchall()
 
 def add_info(conn, user_id, r:int, route:int, log:int):     
@@ -22,3 +22,8 @@ def clear_routes_table(conn):
 def count_by_user(conn, user_id):
     res = conn.cursor().execute("SELECT COUNT(*) FROM routes WHERE user_id = ?", (user_id,))
     return res.fetchall()[0][0]
+
+def show_routes_table(conn):
+    sql = "SELECT * FROM routes"
+    res = conn.cursor().execute(sql)
+    return res.fetchall()
